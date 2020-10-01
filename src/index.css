@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a, :focus {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+a:hover, a:focus {
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+}
