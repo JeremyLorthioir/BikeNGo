@@ -1,0 +1,29 @@
+@startuml
+
+class Renter {
+  String Name
+  String adress
+  Integer postcode
+  String city
+  Integer rating
+}
+
+class SkiRessort {
+  String Name
+  Integer postcode
+  String city
+  Integer rating
+}
+
+class Rent {
+  String type
+  Integer idRenter
+  String description
+  Double prix
+}
+
+
+Renter *-- SkiRessort
+Rent --* Renter
+
+@enduml
