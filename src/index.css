@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./img/body-background.png');
+  background-repeat: repeat;
+  background-color: #FAF4F2;
 }
 
 code {
@@ -19,6 +22,6 @@ a, :focus {
 }
 
 a:hover, a:focus {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #FFF;
   padding-bottom: 3px;
 }

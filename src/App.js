@@ -6,17 +6,23 @@ import Typography from "@material-ui/core/Typography";
 import MenuIcon from "@material-ui/icons/Menu";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./utils/Footer";
+import Homepage from "./components/Homepage";
+import Loueur from "./components/Loueur";
+import Station from "./components/Station";
 
 const useStyles = makeStyles((theme) => ({
-	root: {},
+	root: {
+    boxShadow: 'none',
+    marginLeft: '120px',
+  },
 	menuButton: {
 		marginRight: theme.spacing(2),
-		fill: "#000",
+		fill: "#FFF",
 	},
 	title: {
 		padding: "0 10px",
 		fontSize: "16px",
-		color: "#000",
+		color: "#FFF",
 	},
 }));
 
@@ -25,8 +31,8 @@ export default function App() {
 
 	return (
 		<Router>
-			<div className={classes.root}>
-				<AppBar position="static" color="#fff">
+			<div>
+				<AppBar position="static" color="transparent" className={classes.root}>
 					<Toolbar>
 						<MenuIcon className={classes.menuButton} />
 						<Typography variant="h6" className={classes.title}>
@@ -54,13 +60,13 @@ export default function App() {
 						<h2>Evenements</h2>
 					</Route>
           <Route path="/loueurs">
-						<h2>loueur</h2>
+						<Loueur />
 					</Route>
 					<Route path="/stations">
-						<h2>Station</h2>
+						<Station />
 					</Route>
 					<Route path="/">
-						<h2>Home</h2>
+						<Homepage />
 					</Route>
 				</Switch>
 			</div>
