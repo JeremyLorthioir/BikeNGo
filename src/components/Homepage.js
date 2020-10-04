@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
     titleContainer: {
         position: 'absolute', 
+        zIndex: '-1',
         top: 0,
         height: '100vh', 
         width: '100%', 
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#FFF', 
     },
     subtitle: {
-        padding: '40px', 
+        paddingBottom: '40px', 
         fontSize: '24px',
         maxWidth: '50%'
     },
