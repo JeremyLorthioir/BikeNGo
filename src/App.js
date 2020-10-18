@@ -12,9 +12,14 @@ import Station from "./components/Station";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-    boxShadow: 'none',
-    marginLeft: '120px',
-  },
+		boxShadow: "none",
+		margin: "0px",
+		width: '100%'
+	},
+	header: {
+		marginLeft: '120px', 
+		padding: '0', 
+	},
 	menuButton: {
 		marginRight: theme.spacing(2),
 		fill: "#FFF",
@@ -33,7 +38,7 @@ export default function App() {
 		<Router>
 			<div>
 				<AppBar position="static" color="transparent" className={classes.root}>
-					<Toolbar>
+					<Toolbar className={classes.header}>
 						<MenuIcon className={classes.menuButton} />
 						<Typography variant="h6" className={classes.title}>
 							<Link to="/">Accueil</Link>
@@ -53,13 +58,13 @@ export default function App() {
 					</Toolbar>
 				</AppBar>
 				<Switch>
-        <Route path="/espace-professionnels">
+					<Route path="/espace-professionnels">
 						<h2>Espace pro</h2>
 					</Route>
-          <Route path="/evenements">
+					<Route path="/evenements">
 						<h2>Evenements</h2>
 					</Route>
-          <Route path="/loueurs">
+					<Route path="/loueurs">
 						<Loueur />
 					</Route>
 					<Route path="/stations">

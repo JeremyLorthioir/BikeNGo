@@ -41,6 +41,36 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '24px',
         maxWidth: '50%'
     },
+    cardContainer: {
+        maxWidth: '80%', 
+        margin: 'auto', 
+        justifyContent: 'space-around'
+    },
+    card: {
+        backgroundColor: '#FFFFFF', 
+        borderRadius: '25px', 
+        padding: '30px', 
+        marginTop: '-150px', 
+        width: 'calc(100% - 15px)'
+    },
+    cardImage: {
+        width: '100px', 
+        height: '100px',
+        display: 'block',
+        margin: 'auto'
+    },
+    cardTitle: {
+        fontSize: '20px',
+        fontWeight: 'bold', 
+        textAlign: 'center', 
+        padding: '10px 0'
+    }, 
+    cardSubtitle: {
+        fontSize: '16px',
+        textAlign: 'center',
+        display: 'block',
+        margin: 'auto'
+    },
 }));
 
 export default function Homepage() {
@@ -52,6 +82,28 @@ export default function Homepage() {
                 <Typography variant="h1" className={classes.title}>Redescendre sans jamais grimper</Typography>
                 <Typography variant="subtitle" className={classes.subtitle}>Réservez votre matériel de descente dans les meilleurs ateliers des plus grandes stations de sports d’hiver.</Typography>
                 <Button variant="contained" color="secondary">Découvrez les stations</Button>
+            </Grid>
+            <Grid direction='row' container className={classes.cardContainer}>
+                <Grid direction='column' className={classes.card} sm={2}>
+                    <img className={classes.cardImage} src={require('../img/homepage-firecamp-icon.png')} />
+                    <Typography variant="h2" className={classes.cardTitle}>Sélectionnez votre station</Typography>
+                    <Typography variant="subtitle" className={classes.cardSubtitle}>Retrouvez les principales informations des stations : plan, météo, tarifs…</Typography>
+                </Grid>
+                <Grid direction='column' className={classes.card} sm={2}>
+                    <img className={classes.cardImage} src={require('../img/homepage-ticket-icon.png')} />
+                    <Typography variant="h2" className={classes.cardTitle}>Choisissez vos dates de séjour</Typography>
+                    <Typography variant="subtitle" className={classes.cardSubtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Typography>
+                </Grid>
+                <Grid direction='column' className={classes.card} sm={2}>
+                    <img className={classes.cardImage} src={require('../img/homepage-paper-icon.png')} />
+                    <Typography variant="h2" className={classes.cardTitle}>Sélectionnez votre loueur</Typography>
+                    <Typography variant="subtitle" className={classes.cardSubtitle}>De nombreux loueurs sont présents sur la plateforme. Sélectionnez celui qui correspond au mieux à votre discipline, budget ou localisation</Typography>
+                </Grid>
+                <Grid direction='column' className={classes.card} sm={2}>
+                    <img className={classes.cardImage} src={require('../img/homepage-gear-icon.png')} />
+                    <Typography variant="h2" className={classes.cardTitle}>Réservez</Typography>
+                    <Typography variant="subtitle" className={classes.cardSubtitle}>Une fois votre matériel trouvé, envoyez une demande de réservation au loueur et attendez sa confirmation</Typography>
+                </Grid>
             </Grid>
         </div>
     );
