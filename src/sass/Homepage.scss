@@ -1,0 +1,97 @@
+/* ==================================================================
+*
+*   HOMEPAGE
+*
+==================================================================*/
+.homepage {
+	.image {
+		height: 100vh;
+		width: 100%;
+		position: relative;
+		margin-top: -64px;
+		z-index: -1;
+		object-fit: cover;
+		border-radius: 0 0 200px 200px;
+	}
+	.title {
+		font-size: 70px;
+		font-weight: bold;
+		padding-bottom: 40px;
+		max-width: 50%;
+	}
+	.titleContainer {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+	}
+	.subtitle {
+		padding-bottom: 40px;
+		font-size: 24px;
+		max-width: 50%;
+	}
+
+	/* ==================================================================
+    *
+    *   FIRST CARD ROW
+    *
+    ==================================================================*/
+
+	.cardContainer {
+		max-width: 80%;
+		margin: auto;
+		justify-content: space-around;
+
+		.card {
+			background-color: #ffffff;
+			border-radius: 25px;
+			padding: 30px;
+			margin-top: -145px;
+			width: calc(100% - 15px);
+		}
+		.cardImageContainer {
+			height: 100px;
+			width: 100px;
+			margin: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.cardImage {
+			max-width: 100px;
+			max-height: 100px;
+			display: block;
+			margin: auto;
+		}
+		.cardTitle {
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			padding: 10px 0;
+		}
+		.cardSubtitle {
+			font-size: 16px;
+			text-align: center;
+			display: block;
+			margin: auto;
+		}
+	}
+
+	/* ==================================================================
+    *
+    *   LOVED CONTENT
+    *
+    ==================================================================*/
+	.lovedContentContainer {
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	}
+}
