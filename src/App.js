@@ -3,12 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import MenuIcon from "@material-ui/icons/Menu";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./utils/Footer";
-import Homepage from "./components/Homepage";
-import Loueur from "./components/Loueur";
-import Station from "./components/Station";
+import Homepage from "./pages/Homepage";
+import Loueur from "./pages/Loueur";
+import Station from "./pages/Station";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -23,6 +22,8 @@ const useStyles = makeStyles((theme) => ({
 	menuButton: {
 		marginRight: theme.spacing(2),
 		fill: "#FFF",
+		width: '40px',
+		height: '40px',
 	},
 	title: {
 		padding: "0 10px",
@@ -39,7 +40,7 @@ export default function App() {
 			<div>
 				<AppBar position="static" color="transparent" className={classes.root}>
 					<Toolbar className={classes.header}>
-						<MenuIcon className={classes.menuButton} />
+						<img src={require('./img/site-icon.png')} className={classes.menuButton} />
 						<Typography variant="h6" className={classes.title}>
 							<Link to="/">Accueil</Link>
 						</Typography>
