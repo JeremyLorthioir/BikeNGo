@@ -74,8 +74,14 @@
       text-align: center;
       display: block;
       margin: auto; }
-  .homepage .lovedContentContainer img {
-    width: 100px;
-    height: 100px; }
+  .homepage .lovedContentContainer {
+    margin-top: 50px; }
+    .homepage .lovedContentContainer img {
+      width: 70px;
+      height: 70px;
+      margin: auto; }
+    .homepage .lovedContentContainer .lovedContentCardContainer {
+      margin-top: 150px;
+      justify-content: space-around; }
 
 /*# sourceMappingURL=Homepage.css.map */

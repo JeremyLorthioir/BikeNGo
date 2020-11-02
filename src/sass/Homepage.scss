@@ -89,9 +89,17 @@
     *
     ==================================================================*/
 	.lovedContentContainer {
+		margin-top: 50px;
+
 		img {
-			width: 100px;
-			height: 100px;
+			width: 70px;
+			height: 70px;
+			margin: auto;
+		}
+
+		.lovedContentCardContainer {
+			margin-top: 150px;
+			justify-content: space-around;
 		}
 	}
 }
