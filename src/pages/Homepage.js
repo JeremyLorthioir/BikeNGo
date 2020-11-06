@@ -2,32 +2,42 @@ import React from "react";
 import {
     makeStyles
 } from "@material-ui/core/styles";
+import ReactStars from "react-rating-stars-component";
 
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from '@material-ui/core/Button';
+import StarIcon from '@material-ui/icons/Star';
 
 export default function Homepage() {
     let lovedRental = [
         {
             name: 'Loueur 1',
+            station: 'Chamrousse',
             description: 'Lorem ipsum',
-            photoUrl: '/img/homepage-paper-icon.png'
+            photoUrl: 'https://cdn-s-www.ledauphine.com/images/B23A08E6-95C0-4717-AE74-0BAAF48340C0/NW_raw/chamrousse-vue-des-pistes-mais-a-l-horizon-2020-image-aktis-1523223787.jpg',
+            rating: 5
         }, 
         {
             name: 'Loueur 2',
+            station: 'Chamrousse',
             description: 'Lorem ipsum',
-            photoUrl: '/img/homepage-paper-icon.png'
+            photoUrl: '/img/homepage-paper-icon.png',
+            rating: 4.5
         },
         {
             name: 'Loueur 3',
+            station: 'Chamrousse',
             description: 'Lorem ipsum',
-            photoUrl: '/img/homepage-paper-icon.png'
+            photoUrl: '/img/homepage-paper-icon.png',
+            rating: 2
         }, 
         {
             name: 'Loueur 4',
+            station: 'Alpe Huez',
             description: 'Lorem ipsum',
-            photoUrl: '/img/homepage-paper-icon.png'
+            photoUrl: '/img/homepage-paper-icon.png',
+            rating: 3.9
         }
     ];
     return ( 
@@ -81,11 +91,14 @@ export default function Homepage() {
                     {
                         lovedRental.map(renter => (
                             <Grid direction='column' className={'card'} sm={2}>
-                                <div className={'cardImageContainer'}>
+                                <div>
                                     <img alt='' className={'cardImage'} src={renter.photoUrl} />
                                 </div>
+                                <Typography className={'cardLocation'}>{renter.station}</Typography>
                                 <Typography variant="h2" className={'cardTitle'}>{renter.name}</Typography>
                                 <Typography variant="subtitle" className={'cardSubtitle'}>{renter.description}</Typography>
+                                
+                                <ReactStars count={5} value={renter.rating} edit={false} size={24} activeColor="#E76F51"/>
                             </Grid>
                         ))
                         
@@ -103,11 +116,14 @@ export default function Homepage() {
                     {
                         lovedRental.map(renter => (
                             <Grid direction='column' className={'card'} sm={2}>
-                                <div className={'cardImageContainer'}>
+                                 <div>
                                     <img alt='' className={'cardImage'} src={renter.photoUrl} />
                                 </div>
+                                <Typography className={'cardLocation'}>{renter.station}</Typography>
                                 <Typography variant="h2" className={'cardTitle'}>{renter.name}</Typography>
                                 <Typography variant="subtitle" className={'cardSubtitle'}>{renter.description}</Typography>
+
+                                <ReactStars count={5} value={renter.rating} edit={false} size={24} activeColor="#E76F51"/>
                             </Grid>
                         ))
                         

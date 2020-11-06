@@ -87,6 +87,12 @@ a:hover, a:focus {
     justify-content: center;
     align-items: center;
     color: #fff; }
+    .homepage .titleContainer button {
+      background-color: #e76f51;
+      color: #ffffff;
+      padding: 25px;
+      border-radius: 50px;
+      box-shadow: none; }
   .homepage .subtitle {
     padding-bottom: 40px;
     font-size: 24px;
@@ -132,3 +138,23 @@ a:hover, a:focus {
     .homepage .lovedContentContainer .lovedContentCardContainer {
       margin-top: 150px;
       justify-content: space-around; }
+    .homepage .lovedContentContainer .react-stars {
+      margin: auto; }
+    .homepage .lovedContentContainer .cardLocation {
+      color: #e76f51;
+      background-color: #ffffff;
+      margin: auto;
+      margin-top: -20px;
+      padding: 20px;
+      border-radius: 15px;
+      position: relative;
+      max-width: 50%;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold; }
+    .homepage .lovedContentContainer .cardImage {
+      max-width: 200px;
+      max-height: 200px;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px; }
