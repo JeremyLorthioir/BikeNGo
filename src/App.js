@@ -13,17 +13,17 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		boxShadow: "none",
 		margin: "0px",
-		width: '100%'
+		width: "100%",
 	},
 	header: {
-		marginLeft: '120px', 
-		padding: '0', 
+		marginLeft: "120px",
+		padding: "0",
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
 		fill: "#FFF",
-		width: '40px',
-		height: '40px',
+		width: "40px",
+		height: "40px",
 	},
 	title: {
 		padding: "0 10px",
@@ -40,7 +40,10 @@ export default function App() {
 			<div>
 				<AppBar position="static" color="transparent" className={classes.root}>
 					<Toolbar className={classes.header}>
-						<img src={require('./img/site-icon.png')} className={classes.menuButton} />
+						<img
+							src={require("./img/site-icon.png")}
+							className={classes.menuButton}
+						/>
 						<Typography variant="h6" className={classes.title}>
 							<Link to="/">Accueil</Link>
 						</Typography>
